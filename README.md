@@ -97,6 +97,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
         <groupId>commons-logging</groupId>
         <artifactId>commons-logging</artifactId>
         <version>1.1.1</version>
+        <scope>compile</scope>
     </dependency>
 ```
 
@@ -109,6 +110,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 | runtime | 表示編譯時用不到，只有執行時會用到，所以發佈程式時須要一併打包，如GWT 的 gwt-servlet.jar |
 | test | 只有在單元測試時會用到，發佈程式時並不會用到，所以不會被打包 |
 | system | 與provided相似，但是固定存在系統檔案,須以 systemPath 指定路徑  |
+> Apache Maven Project
+> > [Introduction to the Dependency Mechanism](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html)
 
 至於commons-loggin是否須要使用到其它的Library，根本完全不用在意，因為Maven會自動導入相關的Library 
 
